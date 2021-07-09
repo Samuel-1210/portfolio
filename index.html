@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    
     <title>Portfolio</title>
 </head>
 
@@ -24,38 +26,234 @@
             <span>Fechar</span>
         </div>
 
-        <header>
-            <div class="img-wrapper">
+        <header id="home">
+            <div class="img-wrapper" id="demo">
                 <img src="img/bg5.jpg" alt="">
             </div>
             <div class="banner">
                 <h1>Desenvolvedor WEB & <BR> Front End Designer</h1>
                 <p>Samuel dos Santos</p>
-                <button onclick="history.go(0)">Saiba mais</button>
+                <a href="#conhecimentos"> <button>Saiba mais</button></a>
             </div>
         </header>
 
-        <div class="sidebar">
+        <aside class="sidebar">
             <nav>
                 <ul class="menu">
-                    <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Conhecimento</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Projetos</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Contato</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Orçamentos</a></li>
+                    <li class="menu-item"><a href="#home" class="menu-link">Home</a></li>
+                    <li class="menu-item"><a href="#conhecimentos" class="menu-link">Conhecimento</a></li>
+                    <li class="menu-item"><a href="#projetos" class="menu-link">Projetos</a></li>
+                    <li class="menu-item"><a href="#contato" class="menu-link">Contato</a></li>
+                    <li class="menu-item"><a href="#orcamento" class="menu-link">Orçamentos</a></li>
                 </ul>
             </nav>
 
             <div class="social-media">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/samueldos-santos/"><i class="fab fa-linkedin"></i></a>
+                <a target="_blank" href="https://github.com/Samuel-1210"><i class="fab fa-github"></i></a>
+                <a target="_blank" href="https://www.instagram.com/samuka.1210/"><i class="fab fa-instagram"></i></a>
+            </div>
+        </aside>
+
+
+        <section class="sessao-conhecimentos" id="conhecimentos">
+            <div class="sessao-header">
+                <h1>Conhecimentos</h1>
+            </div>
+            <div class="conhecimentos">
+                <div class="conhecimento">
+                    <div class="conhecimento-header">
+                        <i class="fab fa-html5"></i>
+                        <h3>HTML</h3>
+                    </div>
+                    <div class="conhecimento-text">
+                        <p>Em conjunto do CSS tenho usado o HTML para praticar e desenvolver, usando boas práticas e sempre descobrindo uma tag nova.</p>
+                    </div>
+                </div>
+                <div class="conhecimento">
+                    <div class="conhecimento-header">
+                        <i class="fab fa-css3-alt"></i>
+                        <h3>CSS</h3>
+                    </div>
+                    <div class="conhecimento-text">
+                        <p>Tenho treinado bastante CSS, como demonstrado nesse site de portfólio, usufrui bastante para o design do mesmo, e descobrindo formas de dar vida as páginas. </p>
+                    </div>
+                </div>
+                <div class="conhecimento">
+                    <div class="conhecimento-header">
+                        <i class="fab fa-js"></i>
+                        <h3>JavaScript</h3>
+                    </div>
+                    <div class="conhecimento-text">
+                        <p>Ainda descobrindo sobre JavaScript, possuo lógica pois estudei muito sobre Java. No momento penso em criar um projeto para poder usá-lo um pouco mais, além desse site.</p>
+                    </div>
+                </div>
+                <div class="conhecimento">
+                    <div class="conhecimento-header">
+                        <i class="fab fa-node"></i>
+                        <h3>NODE.JS</h3>
+                    </div>
+                    <div class="conhecimento-text">
+                        <p>Durante pesquisas e estudos de desenvolvimento descobri e estudei sobre o Node e sua aplicação, ainda em busca de poder aprender para poder aplicar.</p>
+                    </div>
+                </div>
+                <div class="conhecimento">
+                    <div class="conhecimento-header">
+                        <i class="fab fa-bootstrap"></i>
+                        <h3>Boostrap</h3>
+                    </div>
+                    <div class="conhecimento-text">
+                        <p>Conheci o Bootstrap também através de pesquisas e estudos e vi que ele é um framework muito útil para quem desenvolve para web. </p>
+                    </div>
+                </div>
+                <div class="conhecimento">
+                    <div class="conhecimento-header">
+                        <i class="fab fa-github"></i>
+                        <h3>GitHub & Git</h3>
+                    </div>
+                    <div class="conhecimento-text">
+                        <p>Ainda iniciante na plataforma, planejo começar a hospedar os projetos e usar o versionamento que ela propõe, para melhor organização e compartilhamento de códigos.</p>
+                    </div>
+                </div>
+                <div class="conhecimentos-img-wrapper">
+                    <img src="img/conhecimentos2.jpg" alt="imagem conhecimento">
+                </div>
+            </div>
+        </section>
+
+
+        <section class="sessao-projetos" id="projetos">
+            <div class="sessao-header">
+                <h1>Projetos</h1>
+            </div>
+            <div class="projetos">
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="img/proj1.png" alt="">
+                    </div>
+
+                    <div class="card-info">
+                        <h2>Portfólio</h2>
+                        <h3>HTML CSS JavaScript</h3>
+                        <p>O projeto portfólio é esse que você está vendo na sua tela. Para desenvolver esse site one page  usei HTML, CSS e Javascript no desenvolvimento. O botão te levará ao meu GitHub. </p>
+                        <button class="btn">Saiba Mais</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="img/proj2.png" alt="">
+
+                    </div>
+                    <div class="card-info">
+                        <h2>Projeto de Cadastro Aluno/Notas</h2>
+                        <h3>JAVA - SQL</h3>
+                        <p>Nesse projeto escolar tivemos que desenvolver um sistema capaz de executar o CRUD em um banco de dados, em forma de um sistema escolar, onde ficam gravados as matérias, faltas e notas do aluno</p>
+                        <button class="btn">Saiba Mais</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="img/proj3.png" alt="">
+                    </div>
+                    <div class="card-info">
+                        <h2>Em Breve</h2>
+                        <h3>NODE.JS ou ANGULAR</h3>
+                        <p>Este lugar será designado ao próximo projeto que irei desenvolver usando NODE ou ANGULAR.</p>
+                        <button class="btn">Saiba Mais</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </section>
+
+    <section class="sessao-contato" id="contato">
+        <div class="contato-wrapper">
+            <div class="contato-left">
+
             </div>
 
+            <div class="contato-right">
+                <h1>Contato</h1>
+                
+                <form action="https://api.staticforms.xyz/submit" target="_blank" method="post">
+                    <input type="hidden" name="accessKey" value="9ee07eea-d161-418a-8294-51d192aa45ca">
+                    <div class="input-group">
+                        <input type="text" class="field" name="name" id="nome" required>
+                        <label for="nome" class="field-label">Nome</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="field" id="email" name="email" required>
+                        <label for="email" class="field-label">Email</label>
+                    </div>
+                    <div class="input-group">
+                        <textarea class="field" id="mensagem" name="message" required></textarea>
+                        <label for="mensagem" class="field-label">Mensagem</label>
+                    </div>
+                    
+                    <button type="submit" id="bt-enviar" class="btn btn-submit" >Enviar</button>
+                </form>
+            </div>
         </div>
+    </section>
 
-    </div>
+    <section class="sessao-orcamento" id="orcamento">
+        <div class="orcamento-wrapper">
+            <h1>Faça seu orçamento</h1>
+            <form action="https://api.staticforms.xyz/submit" target="_blank" method="post">
+                <input type="hidden" name="accessKey" value="9ee07eea-d161-418a-8294-51d192aa45ca">
 
+              <label for="qtde" required>Qtde de Páginas</label>
+              <input type="number" min="1" name="$qtde" id="qtde" required>
+              <label for="js">Preciso de um script JS</label>
+              <input type="checkbox" name="$jsd" id="js">
+              <label>Layout</label>
+              <div class="group-layout">
+                <div>
+                    
+                
+                  <input type="radio" name="$group1" value="precisa" id="layout-sim" required>
+                  <label for="layout-sim">Preciso de um layout</label>
+
+                </div>
+                <div>
+                 
+                    <input type="radio" name="$group1" value="nprecisa" id="layout-nao" checked required>
+                    <label for="layout-nao">Já tenho um layout</label>
+
+                </div>
+              </div>
+              <label for="prazo">Prazo: 6 Semanas</label>
+              <input type="range" name="$prazo" id="prazo" min="1" max="10"  >
+              <label id="preco" name="$preco">R$ 0,00</label>
+              <button class="btn btn-orcamento" type="submit">Enviar</button>
+            </form>
+                </div>
+            </section>
+
+            <footer>
+                <div class="footer-content">
+                    <p>
+                        Copyright &copy; 2021, Samuel dos Santos - Todos os Direitos Reservados
+                        
+                    </p>
+                    <div class="social-list">
+                        <ul>
+                            <li><a target="_blank" href="https://www.linkedin.com/in/samueldos-santos/""><i class="fab fa-linkedin" ></i></a></li>
+                            <li><a target="_blank" href="https://www.instagram.com/samuka.1210/"><i class="fab fa-instagram"></i></a></li>
+                            <li><a target="_blank" href="https://github.com/Samuel-1210"><i class="fab fa-github"></i></a></li>
+                          </ul>
+                    </div>
+                   
+                </div>
+
+            </footer>
+            <a href="#home" id="link-topo">
+                <i class="fas fa-arrow-up"></i>
+            </a>
+
+        </div>
+    
+    
 </body>
 
 <script src="script.js"></script>

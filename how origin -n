@@ -1,0 +1,237 @@
+[33mcommit be53322bbf58b42fbccd1a9b67da7e66ad0ce71e[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Samuel-1210 <samuka2568@gmail.com>
+Date:   Tue May 18 21:11:35 2021 -0300
+
+    Sidebar with Hamburguer
+
+[1mdiff --git a/index.html b/index.html[m
+[1mindex 7d8bbd2..87ed49c 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -16,20 +16,48 @@[m
+ <body>[m
+ [m
+     <div class="container">[m
+[32m+[m
+[32m+[m[32m        <div class="hamburguer">[m
+[32m+[m[32m            <div class="line" id="line"></div>[m
+[32m+[m[32m            <div class="line" id="line2"></div>[m
+[32m+[m[32m            <div class="line" id="line3"></div>[m
+[32m+[m[32m            <span>Fechar</span>[m
+[32m+[m[32m        </div>[m
+[32m+[m
+         <header>[m
+             <div class="img-wrapper">[m
+[31m-                <img src="img/bg2.jpg" alt="">[m
+[32m+[m[32m                <img src="img/bg5.jpg" alt="">[m
+             </div>[m
+             <div class="banner">[m
+                 <h1>Desenvolvedor WEB & <BR> Front End Designer</h1>[m
+                 <p>Samuel dos Santos</p>[m
+[31m-                <button>Saiba maisssssssssssssssss </button></div>[m
+[31m-                <p>a</p>[m
+[31m-                [m
+[31m-                    </header>[m
+[32m+[m[32m                <button onclick="history.go(0)">Saiba mais</button>[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m        </header>[m
+[32m+[m
+[32m+[m[32m        <div class="sidebar">[m
+[32m+[m[32m            <nav>[m
+[32m+[m[32m                <ul class="menu">[m
+[32m+[m[32m                    <li class="menu-item"><a href="#" class="menu-link">Home</a></li>[m
+[32m+[m[32m                    <li class="menu-item"><a href="#" class="menu-link">Conhecimento</a></li>[m
+[32m+[m[32m                    <li class="menu-item"><a href="#" class="menu-link">Projetos</a></li>[m
+[32m+[m[32m                    <li class="menu-item"><a href="#" class="menu-link">Contato</a></li>[m
+[32m+[m[32m                    <li class="menu-item"><a href="#" class="menu-link">Orçamentos</a></li>[m
+[32m+[m[32m                </ul>[m
+[32m+[m[32m            </nav>[m
+[32m+[m
+[32m+[m[32m            <div class="social-media">[m
+[32m+[m[32m                <a href="#"><i class="fab fa-facebook"></i></a>[m
+[32m+[m[32m                <a href="#"><i class="fab fa-github"></i></a>[m
+[32m+[m[32m                <a href="#"><i class="fab fa-twitter"></i></a>[m
+[32m+[m[32m            </div>[m
+[32m+[m
+[32m+[m[32m        </div>[m
+ [m
+     </div>[m
+ [m
+ </body>[m
+ [m
+[32m+[m[32m<script src="script.js"></script>[m
+[32m+[m
+ </html>[m
+\ No newline at end of file[m
+[1mdiff --git a/script.js b/script.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e8bf4a5[m
+[1m--- /dev/null[m
+[1m+++ b/script.js[m
+[36m@@ -0,0 +1,5 @@[m
+[32m+[m[32mvar hamburguer = document.querySelector(".hamburguer");[m
+[32m+[m
+[32m+[m[32mhamburguer.addEventListener("click", function(){[m
+[32m+[m[32m    document.querySelector(".container").classList.toggle("show-menu");[m
+[32m+[m[32m})[m
+\ No newline at end of file[m
+[1mdiff --git a/style.css b/style.css[m
+[1mindex 7f3855e..9daf3b6 100644[m
+[1m--- a/style.css[m
+[1m+++ b/style.css[m
+[36m@@ -1,16 +1,83 @@[m
+ @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');[m
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');[m
+[32m+[m[32m@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap');[m
+[32m+[m
+[32m+[m[32m@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.css");[m
+[32m+[m
+ *{[m
+     margin: 0;[m
+     padding: 0;[m
+[32m+[m[32m    list-style: none;[m
+[32m+[m[32m    text-decoration: none;[m
+ }[m
+ [m
+ :root {[m
+     --font-primary: "Ubuntu", serif;[m
+     --font-secundary: "Open Sans Condensed", serif;[m
+[31m-    --font-action: "Muli", serif;[m
+[32m+[m[32m    --font-action: "Mulish", serif;[m
+   }[m
+ [m
+[32m+[m[32m.hamburguer{[m
+[32m+[m[41m    [m
+[32m+[m[32m    width: 2rem;[m
+[32m+[m[32m    height: 2rem;[m
+[32m+[m[32m    position: fixed;[m
+[32m+[m[32m    z-index: 100;[m
+[32m+[m[32m    right: 2rem;[m
+[32m+[m[32m    top: 2rem;[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    flex-direction: column;[m
+[32m+[m[32m    justify-content: space-evenly;[m
+[32m+[m[32m    cursor:pointer;[m
+[32m+[m[41m      [m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.show-menu .hamburguer{[m
+[32m+[m[32m    right:16rem;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.line{[m
+[32m+[m[32m    width: 100%;[m
+[32m+[m[32m    height: .1rem;[m
+[32m+[m[32m    background-color: white;[m
+[32m+[m[32m    box-shadow: 0.1rem 0.1rem 1px black;[m
+[32m+[m[32m    transition: all 0.3s;[m
+[32m+[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.show-menu #line {[m
+[32m+[m[32m    transform: translate(.4rem, .4rem) rotate(45deg);[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.show-menu #line2{[m
+[32m+[m[32m    opacity: 0;[m
+[32m+[m[32m    visibility: hidden;[m
+[32m+[m[41m    [m
+[32m+[m[32m}[m
+[32m+[m[32m.show-menu #line3 {[m
+[32m+[m[32m    transform: translate(.2rem, -.5rem) rotate(-45deg);[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.hamburguer span{[m
+[32m+[m[32m    position: absolute;[m
+[32m+[m[32m    left: 3rem;[m
+[32m+[m[32m    background-color:#054b92;[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    justify-content: center;[m
+[32m+[m[32m    align-items: center;[m
+[32m+[m[32m    color:white;[m
+[32m+[m[32m    font-family: var(--font-action);[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.hamburguer span::before{[m
+[32m+[m[32m    content: "";[m
+[32m+[m[32m    position: absolute;[m
+[32m+[m[32m    border-radius: 15px;[m
+[32m+[m[32m    border: 1px solid black;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m
+[32m+[m
+ header{[m
+     width: 100%;[m
+     height: 100vh;[m
+[36m@@ -47,7 +114,7 @@[m [mheader{[m
+ .banner{[m
+     position: absolute;[m
+     top:30%;[m
+[31m-    left:32%;[m
+[32m+[m[32m    left: 15%;[m
+     [m
+ }[m
+ [m
+[36m@@ -109,4 +176,69 @@[m [mheader{[m
+         opacity: 1;[m
+       }[m
+ [m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.sidebar{[m
+[32m+[m[32m    width: 20rem;[m
+[32m+[m[32m    height: 100vh;[m
+[32m+[m[32m    background-color: white;[m
+[32m+[m[32m    position:fixed;[m
+[32m+[m[32m    top: 0;[m
+[32m+[m[32m    right: -20rem;[m
+[32m+[m[32m    transition: all 0.5s;[m
+[32m+[m[32m    opacity: 0.90;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.show-menu .sidebar{[m
+[32m+[m[32m    right: 0;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.menu{[m
+[32m+[m[32m    position: absolute;[m
+[32m+[m[32m    top:40%;[m
+[32m+[m[32m    left: 50%;[m
+[32m+[m[32m    transform:translate(-50%,-50%);[m
+[32m+[m[41m    [m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.menu-item{[m
+[32m+[m[32m    text-align: center;[m
+[32m+[m[41m    [m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.menu-link{[m
+[32m+[m[32m    font-family: var(--font-action);[m
+[32m+[m[32m    font-size: 2rem;[m
+[32m+[m[32m    color:gray;[m
+[32m+[m[32m    transition: color 1.2s;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.menu-link:hover{[m
+[32m+[m[32m    color:#00F260;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.social-media{[m
+[32m+[m[41m    [m
+[32m+[m[32m    position: absolute;[m
+[32m+[m[32m    bottom: 2rem;[m
+[32m+[m[32m    width: 100%;[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    justify-content: space-evenly;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.social-media i{[m
+[32m+[m[32m    background-color: #0575E6;[m
+[32m+[m[32m    color:white;[m
+[32m+[m[32m    height: 2.5rem;[m
+[32m+[m[32m    width:2.5rem;[m
+[32m+[m[32m    font-size: 1.5rem;[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    justify-con
