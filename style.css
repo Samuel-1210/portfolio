@@ -227,7 +227,7 @@ header{
 }
 
 .menu-item{
-    text-align: center;
+    text-align: left;
     
 }
 
@@ -642,6 +642,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .footer-content{
